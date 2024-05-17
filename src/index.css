@@ -65,3 +65,9 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* 2. General */
+.home-links{
+  flex-direction:column;
+}
+
