@@ -11,7 +11,9 @@ import LandingPage from "./components/LandingPage";
 
 import Login from "./components/Auth/LogIn";
 import { NavBar } from "./components/NavBar";
+
 import { HomePage } from "./components/HomePage";
+
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/customerSingUp" element={<CustomerSingUp />} />
         <Route path="/farmerSingUp" element={<FarmersSingUp />} />
+
         <Route path="/HomePage" element={<HomePage />} />
+
 
         <Route path="/login" element={<Login />} />
       </Routes>
