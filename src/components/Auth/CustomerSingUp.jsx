@@ -1,3 +1,4 @@
+
 import {NavLink} from "react-router-dom"
 
 function CustomerSingUp() {
@@ -12,3 +13,4 @@ function CustomerSingUp() {
 }
 
 export default CustomerSingUp;
+
