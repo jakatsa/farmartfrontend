@@ -1,3 +1,5 @@
+
+
 import './App.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import CustomerSingUp from './components/Auth/CustomerSingUp'
@@ -29,3 +31,4 @@ function App() {
 }
 
 export default App
+
