@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 ::root {
   --clr-primary-500: #8EC711;
 
@@ -209,3 +210,4 @@ select {
 .home-links {
   flex-direction: column;
 }
+
