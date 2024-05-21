@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 function FarmersSingUp() {
     return <div className="farmer-sign-up | form-wrapper">        
-        <div className=" form-wrapper-sign-up | flow">
+        <div className=" form-wrapper-sign-up | glass flow">
         {/* Logo */}
         <p className='font-semi-bold uppercase  text-7xl text-center'>farmart</p>
         {/* Form heading */}
