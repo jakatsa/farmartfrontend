@@ -37,6 +37,7 @@ export const Slice = () => {
           </div>
         ))}
       </div>
+
       <div className="flex absolute bottom-4 left-1/2 transform -translate-x-1/2 md:bottom-12">
         {sliderData.map((dot, index) => (
           <div className="mr-2 md:mr-4" key={dot.id}>
@@ -52,10 +53,12 @@ export const Slice = () => {
         ))}
       </div>
 
+
       <button
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-green-300"
         onClick={() => dispatch(nextSlide(slideIndex + 1))}
       >
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -70,11 +73,13 @@ export const Slice = () => {
             d="M8.25 4.5l7.5 7.5-7.5 7.5"
           />
         </svg>
+
       </button>
       <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-green-300"
         onClick={() => dispatch(prevSlide(slideIndex - 1))}
       >
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -89,6 +94,7 @@ export const Slice = () => {
             d="M15.75 19.5L8.25 12l7.5-7.5"
           />
         </svg>
+
       </button>
     </div>
   );
