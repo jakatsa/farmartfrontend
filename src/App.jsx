@@ -6,8 +6,10 @@ import LandingPage from "./components/LandingPage";
 import Login from "./components/Auth/LogIn";
 import { NavBar } from "./components/NavBar";
 import { HomePage } from "./components/HomePage";
+
 import { FilteredProducts } from "./components/FilteredProducts/FilteredProducts";
 import SignUp from "./components/Auth/SignUp";
+
 
 function App() {
   return (
@@ -19,11 +21,13 @@ function App() {
         <Route path="/farmerSingUp" element={<FarmersSingUp />} />
 
         <Route path="/HomePage" element={<HomePage />} />
+
         <Route path="/FilteredProducts/:type" element={<FilteredProducts />} />
         <Route
           path="/FilteredProducts"
           element={<Navigate to="/FilteredProducts/default" />}
         />
+
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
