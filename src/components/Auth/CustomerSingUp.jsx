@@ -32,4 +32,24 @@ function CustomerSignUp() {
         }
       };
 
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          const response = await fetch('http://localhost:8000/api/customer/register/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+          if (!response.ok) {
+            throw new Error('Failed to register');
+          }
+          // If signup is successful, navigate to the login page
+          navigate('/login');
+        } catch (error) {
+          console.error('Error registering:', error);
+        }
+      };
+
 }
