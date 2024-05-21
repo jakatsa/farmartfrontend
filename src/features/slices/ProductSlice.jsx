@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { storeData } from "../../assets/data/DummyData";
 export const productSlice = createSlice({
-  name: "products",
+  name: "product",
   initialState: {
     filteredProducts:
       JSON.parse(sessionStorage.getItem("filteredData")) || storeData,
