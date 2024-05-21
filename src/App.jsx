@@ -8,6 +8,9 @@ import { NavBar } from "./components/NavBar";
 import { HomePage } from "./components/HomePage";
 import { FilteredProducts } from "./components/FilteredProducts/FilteredProducts";
 
+import { HomePage } from "./components/HomePage";
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,12 +19,14 @@ function App() {
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/customerSingUp" element={<CustomerSingUp />} />
         <Route path="/farmerSingUp" element={<FarmersSingUp />} />
+
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/FilteredProducts/:type" element={<FilteredProducts />} />
         <Route
           path="/FilteredProducts"
           element={<Navigate to="/FilteredProducts/default" />}
         />
+
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>

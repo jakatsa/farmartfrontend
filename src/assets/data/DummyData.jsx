@@ -29,6 +29,7 @@ export const sliderData = [
   },
 ];
 
+
 export const storeData = [
   {
     id: "1",
@@ -730,3 +731,4 @@ export const storeData = [
     price: 550,
   },
 ];
+
