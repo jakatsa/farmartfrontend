@@ -1,7 +1,9 @@
 
 import {NavLink} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function FarmersSingUp() {
+    const navigate = useNavigate();
     return <div className="farmer-sign-up | form-wrapper">        
         <div className=" form-wrapper-sign-up | glass flow">
         {/* Logo */}
