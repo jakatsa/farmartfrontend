@@ -4,6 +4,15 @@ import { useNavigate } from 'react-router-dom';
 
 function FarmersSingUp() {
     const navigate = useNavigate();
+    const [formData, setFormData] = useState({
+        user: {
+          username: '',
+          email: '',
+          password: '',
+          role: 'farmer'
+        },
+        contact: ''
+      });
     return <div className="farmer-sign-up | form-wrapper">        
         <div className=" form-wrapper-sign-up | glass flow">
         {/* Logo */}
