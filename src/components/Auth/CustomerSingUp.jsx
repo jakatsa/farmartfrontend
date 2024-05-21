@@ -13,5 +13,23 @@ function CustomerSignUp() {
         }
       });
 
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        if (name.startsWith('user.')) {
+          const key = name.split('.')[1];
+          setFormData(prevState => ({
+            ...prevState,
+            user: {
+              ...prevState.user,
+              [key]: value
+            }
+          }));
+        } else {
+          setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+          }));
+        }
+      };
 
 }
