@@ -1,8 +1,9 @@
 
 import {NavLink} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 
-function FarmersSingUp() {
+function FarmerSignUp() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         user: {
@@ -134,5 +135,5 @@ function FarmersSingUp() {
       );
     }
 
-export default FarmersSingUp;
+export default FarmerSignUp;
 
