@@ -20,6 +20,3 @@ export const FilteredProducts = () => {
     </>
   );
 };
-{
-  /***filtered products */
-}
