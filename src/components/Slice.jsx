@@ -37,17 +37,58 @@ export const Slice = () => {
           </div>
         ))}
       </div>
+      <div className="flex absolute bottom-4 left-1/2 transform -translate-x-1/2 md:bottom-12">
+        {sliderData.map((dot, index) => (
+          <div className="mr-2 md:mr-4" key={dot.id}>
+            <div
+              className={
+                index === slideIndex
+                  ? "bg-green-300 rounded-full p-2 cursor-pointer"
+                  : "bg-white rounded-full p-2 cursor-pointer"
+              }
+              onClick={() => dispatch(dotSlide(index))}
+            ></div>
+          </div>
+        ))}
+      </div>
+
       <button
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-green-300"
         onClick={() => dispatch(nextSlide(slideIndex + 1))}
       >
-        Next
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
       </button>
       <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-green-300"
         onClick={() => dispatch(prevSlide(slideIndex - 1))}
       >
-        Prev
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
       </button>
     </div>
   );
