@@ -1,7 +1,8 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CustomerSignUp from "./components/Auth/CustomerSingUp";
-import FarmerSignUp from "./components/Auth/FarmersSingUp";
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import CustomerSingUp from "./components/Auth/CustomerSingUp";
+import FarmersSingUp from "./components/Auth/FarmersSingUp";
 
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Auth/LogIn";
