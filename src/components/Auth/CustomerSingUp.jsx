@@ -122,4 +122,4 @@ function CustomerSignUp() {
 
       );
 
-}
+} export default CustomerSignUp;
