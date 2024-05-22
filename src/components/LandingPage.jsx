@@ -6,7 +6,7 @@ function LandingPage() {
       <h1 className="font-bold text-3xl">Working on it!</h1>
 
       <div className="home-links | flex">
-        <NavLink className="capitalize" to="/farmerSingUp">
+        <NavLink className="capitalize" to="/farmersSingUp">
           farmer sign up
         </NavLink>
         <NavLink className="capitalize" to="/customerSingUp">
