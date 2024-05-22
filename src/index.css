@@ -26,6 +26,8 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+
+  min-height: 100dvh;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -75,7 +77,7 @@ select {
 /* 2.Utilities*/
 /* container */
 .container {
-  --max-width: 960px;
+  --max-width: 980px;
   margin-inline: auto;
   width: min(var(--max-width), 80%);
 }
@@ -101,17 +103,30 @@ select {
 
 .btn::hover {
   cursor: pointer;
-  border: 1px solid white;
 
 }
 
-.btn-ghost {
-  border: 2px solid black;
+.btn-primary {
+  max-width: fit-content;
+  height: fit-content;
+  padding: 0.35em 1em;
+}
 
+.btn-ghost {
+
+  border: 2px solid black;
+}
+
+.btn-ghost-white {
+  max-width: fit-content;
+  height: fit-content;
+  padding: 0.35em 1em;
+  border: 1px solid white;
 }
 
 /* 3.Form */
 .form-wrapper {
+  height: 100vh;
   height: 100dvh;
   width: 100%;
 
@@ -152,10 +167,8 @@ select {
 }
 
 .sign-up-social-icon {
-
   margin-inline-end: 1.2em;
   width: 7%;
-
 }
 
 .social-btns {
@@ -167,6 +180,7 @@ select {
   align-items: center;
 }
 
+.hero,
 .login,
 .customer-sign-up,
 .farmer-sign-up {
@@ -215,6 +229,7 @@ select {
   background-position: right center;
 }
 
+.hero::before,
 .login::before,
 .customer-sign-up::before,
 .farmer-sign-up::before {
@@ -236,7 +251,7 @@ select {
   align-items: center;
   justify-content: center;
   padding-inline: 1em;
-  background-image: url(./assets/images/login-bg.jpg);
+  background-image: url("./assets/images/login-bg.jpg");
   background-position: center;
 }
 
@@ -249,7 +264,7 @@ select {
   max-width: 100%;
   padding: 3em 3em 3em 1em;
   background-image: linear-gradient(150deg, rgba(138, 138, 138, 0.445), rgba(255, 255, 255, 0.301), rgba(43, 43, 43, 0.37));
-  
+
 }
 
 .login .input-area {
@@ -260,3 +275,196 @@ select {
   width: 90%;
   margin-left: auto;
 }
+
+/* 4. Landing Page */
+/* 4.1 Hero */
+.primary-header {
+  /* background:red; */
+}
+
+.primary-nav-bar {
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1em;
+}
+
+.primary-nav-list {
+  gap: 5.5em;
+}
+
+.primary-nav-btns {
+  gap: 2em;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-image: url("../src/assets/images/carousel/1.jpg");
+  background-position: center center;
+
+}
+
+.hero::before {
+  background-image: linear-gradient(45deg, rgba(29, 12, 0, 0.637), rgba(22, 9, 0, 0.658), rgba(37, 15, 0, 0.616));
+}
+
+.hero-text-wrapper {
+
+  margin-block-start: 5em;
+}
+
+.hero-paragraph {
+
+  max-width: 60ch;
+  line-height: 1.8;
+  letter-spacing: 0.032rem;
+}
+
+/* 5.Services */
+.services {
+  margin-block-start: 3em;
+}
+
+.services-title {
+  font-size: 3.5rem;
+}
+
+.service-card-grid-heading,
+.service-card-heading {
+  font-size: 2.3rem;
+
+}
+
+.service-link {
+  margin-block-start: 1em;
+}
+
+.link-arrow {
+  font-size: 1.7rem;
+  margin-inline-start: 0.3em;
+  height: fit-content;
+}
+
+/* 5.1 customer and farmer services*/
+.customer-and-farmer-services {
+  padding-block: 1em 6em;
+  justify-content: space-between;
+}
+
+.farmer-service-card,
+.customer-service-card {
+  gap: 0.8em;
+}
+
+.farmer-service-text,
+.customer-service-text {
+  max-width: 49ch;
+  line-height: 1.7;
+}
+
+.farmer-service-icon-wrapper,
+.customer-service-icon-wrapper {
+  place-items: center;
+  margin-block-end: 0.7em;
+}
+
+
+
+.farmer-service-icon,
+.customer-service-icon {
+  object-fit: cover;
+  object-position: center center;
+  width: 35%;
+
+}
+
+.farmer-service-link {
+  margin-block-start: 2.75em;
+}
+
+/*5.2 Other services */
+.other-services-wrapper {
+  gap: 5em;
+}
+
+.service-card-grid-text {
+  max-width: 50ch;
+  grid-area: paragraph;
+}
+
+.service-card-grid-inverse,
+.service-card-grid {
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.service-card-grid {
+  grid-template-areas:
+    "image heading"
+    "image paragraph"
+  ;
+}
+
+.service-card-grid-inverse {
+  grid-template-areas:
+    "heading   image"
+    "paragraph image"
+  ;
+
+}
+
+.service-card-grid-img-inverse,
+.service-card-grid-img {
+  width: 45%;
+}
+
+.service-card-grid-img-inverse {
+  margin-inline: auto;
+}
+
+.service-card-grid-img-wrapper {
+  grid-area: image;
+  align-self: center;
+}
+
+.service-card-grid-heading {
+  grid-area: heading;
+  padding-block-end: 0.5em;
+}
+
+
+/* 6.Footer */
+.footer {
+  margin-block-start: 28em;
+  padding-block: 5em 8em;
+  
+
+}
+
+.footer-grid {
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "trade support source"
+  "social social social"
+  ;
+}
+.trade{
+  grid-area:trade;
+}
+.trade{
+  grid-area:trade;
+}
+.trade{
+  grid-area:trade;
+}
+.footer-social-links-list{
+border:10px solid blue;
+justify-content: space-between;
+margin-block-start: 4em;
+}
+.footer-link {
+  cursor: pointer;
+}
+

@@ -3,7 +3,7 @@ export default {
 
   content: [
     "./index.html",
-    "./src/**/**/*.{js,ts,jsx,tsx}"
+    "./src/**/**/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     darkMode: "class",
@@ -11,12 +11,15 @@ export default {
       colors:{
         primary:{
           500:"#8EC711",
-          700:"#293215",
+          700:" #1E2C00",
           800:"#010600"
         },
         neutral:{
-          100:"#FFF", }
-      }
+          100:"#FFF", },
+        accent:{
+            100:"#FFEFE2",
+          }
+      },
 
     },
   },
