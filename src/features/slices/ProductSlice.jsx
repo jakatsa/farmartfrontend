@@ -8,7 +8,7 @@ export const productSlice = createSlice({
     /** 
     singleProduct:
       JSON.parse(sessionStorage.getItem("singleProduct")) || storeData,
-    error: false,*/
+    error: false,***/
   },
   reducers: {
     filterProducts(state, action) {
