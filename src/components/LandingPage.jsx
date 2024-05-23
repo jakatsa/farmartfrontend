@@ -13,7 +13,9 @@ function LandingPage() {
     <Footer/>
   </>
 
+
   )
+
 }
 
 export default LandingPage;

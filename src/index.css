@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 ::root {
-  --clr-primary-500: #8EC711;
-
+  --clr-primary-500: #8ec711;
 }
 
 /* 1. Defaults */
@@ -16,8 +14,6 @@
   box-sizing: border-box;
   padding: 0;
 }
-
-
 
 /* Set core root defaults */
 html:focus-within {
@@ -73,7 +69,6 @@ select {
   }
 }
 
-
 /* 2.Utilities*/
 /* container */
 .container {
@@ -84,14 +79,16 @@ select {
 
 /* glassmorphisim*/
 .glass {
+
   background-image: linear-gradient(145deg, rgba(138, 138, 138, 0.479), rgba(255, 255, 255, 0.301), rgba(43, 43, 43, 0.37));
+
   backdrop-filter: blur(10px) contrast(95%) brightness(115%);
   box-shadow: inset 0 0px 4px rgb(0 0 0 / 0.1);
 }
 
 /* spacer */
-.flow>:not(:first-child) {
-  margin-top: var(--spacer, 2.8em)
+.flow > :not(:first-child) {
+  margin-top: var(--spacer, 2.8em);
 }
 
 /* button */
@@ -104,6 +101,8 @@ select {
 .btn::hover {
   cursor: pointer;
 
+
+
 }
 
 .btn-primary {
@@ -115,6 +114,7 @@ select {
 .btn-ghost {
 
   border: 2px solid black;
+
 }
 
 .btn-ghost-white {
@@ -122,6 +122,7 @@ select {
   height: fit-content;
   padding: 0.35em 1em;
   border: 1px solid white;
+
 }
 
 /* 3.Form */
@@ -129,16 +130,14 @@ select {
   height: 100vh;
   height: 100dvh;
   width: 100%;
-
 }
 
 .form-sing-up {
   --spacer: 1.5em;
 }
 
-.form-sing-up>* {
+.form-sing-up > * {
   margin-inline-start: 4rem;
-
 }
 
 .form-heading {
@@ -181,6 +180,7 @@ select {
 }
 
 .hero,
+
 .login,
 .customer-sign-up,
 .farmer-sign-up {
@@ -189,6 +189,7 @@ select {
   background-size: cover;
   isolation: isolate;
 }
+
 
 
 .form-wrapper-sign-up {
@@ -202,7 +203,6 @@ select {
   --spacer: 4em;
   width: 70%;
   margin-inline: auto;
-
 }
 
 .or {
@@ -218,8 +218,8 @@ select {
   background-image: url("./assets/images/customer-sign-up-bg.jpg");
   background-position: center right;
 
-}
 
+}
 
 
 /* 3.2 farmer's sing up */
@@ -230,6 +230,7 @@ select {
 }
 
 .hero::before,
+
 .login::before,
 .customer-sign-up::before,
 .farmer-sign-up::before {
@@ -242,7 +243,9 @@ select {
 
 .customer-sign-up::before,
 .farmer-sign-up::before {
+
   background-image: linear-gradient(45deg, rgba(34, 14, 0, 0.596), rgba(49, 22, 1, 0.589), rgba(63, 27, 0, 0.623));
+
 }
 
 /* 3.3 Login */
@@ -251,19 +254,25 @@ select {
   align-items: center;
   justify-content: center;
   padding-inline: 1em;
+
   background-image: url("./assets/images/login-bg.jpg");
+
   background-position: center;
 }
 
 .login::before {
+
   background-image: linear-gradient(74deg, rgba(68, 30, 0, 0.692), rgba(0, 26, 75, 0.623));
+
 }
 
 .form-wrapper-login {
   --max-width: 580px;
   max-width: 100%;
   padding: 3em 3em 3em 1em;
+
   background-image: linear-gradient(150deg, rgba(138, 138, 138, 0.445), rgba(255, 255, 255, 0.301), rgba(43, 43, 43, 0.37));
+
 
 }
 
@@ -275,6 +284,7 @@ select {
   width: 90%;
   margin-left: auto;
 }
+
 
 /* 4. Landing Page */
 /* 4.1 Hero */
@@ -491,3 +501,4 @@ margin-block-start: 3.5em;
   gap:0.3em;
   
 }
+
