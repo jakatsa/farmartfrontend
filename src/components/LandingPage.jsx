@@ -1,26 +1,18 @@
-import { NavLink } from "react-router-dom";
+import Footer from "./Footer";
+import LandingPageHero from "./LandingPage/LandingPageHero";
+import LandingPageServices from "./LandingPage/LandingPageServices";
+
+
 
 function LandingPage() {
   return (
-    <div>
-      <h1 className="font-bold text-3xl">Working on it!</h1>
+  <>
+    <LandingPageHero/>
+    <LandingPageServices/>
+    <Footer/> 
+  </>
 
-      <div className="home-links | flex">
-        <NavLink className="capitalize" to="/farmersSingUp">
-          farmer sign up
-        </NavLink>
-        <NavLink className="capitalize" to="/customerSingUp">
-          customer sign up
-        </NavLink>
-        <NavLink className="capitalize" to="/login">
-          Login
-        </NavLink>
-        <NavLink className="capitalize" to="/HomePage">
-          HomePage
-        </NavLink>
-      </div>
-    </div>
-  );
+  )
 }
 
 export default LandingPage;
