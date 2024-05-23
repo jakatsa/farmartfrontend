@@ -1,7 +1,7 @@
 
 
 function Footer () {
-  return (
+return (
     <div className="footer bg-primary-700 text-accent-100">
         <div className="container">
             <div className="footer-grid grid">
