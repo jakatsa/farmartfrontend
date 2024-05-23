@@ -60,7 +60,7 @@ function FarmerSignUp() {
             {/* Form heading */}
             <h2 className='form-heading font-semi-bold uppercase text-2xl text-center'>Farmer's Sign Up</h2>
             {/* Form wrapper */}
-            <form onSubmit={handleSubmit} className='form-sign-up flow'>
+            <form onSubmit={handleSubmit} className='form-sign-up | flex flex-col flow'>
               {/* Username */}
               <div className="form-item flex flex-col">
                 <label className="uppercase font-semi-bold" htmlFor="username">Username</label>

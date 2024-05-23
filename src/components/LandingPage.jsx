@@ -1,7 +1,6 @@
-
-import LandingPageServices from "./LandingPage/LandingPageServices";
-import LandingPageHero from "./LandingPage/LandingPageHero"
 import Footer from "./Footer";
+import LandingPageHero from "./LandingPage/LandingPageHero";
+import LandingPageServices from "./LandingPage/LandingPageServices";
 
 
 
@@ -10,12 +9,10 @@ function LandingPage() {
   <>
     <LandingPageHero/>
     <LandingPageServices/>
-    <Footer/>
+    <Footer/> 
   </>
 
-
   )
-
 }
 
 export default LandingPage;

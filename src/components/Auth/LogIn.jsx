@@ -10,7 +10,7 @@ function Login() {
         {/* Form heading */}
         <h2 className='form-heading font-bold uppercase text-3xl text-center'>login</h2>
         {/* Form wrapper */}
-        <form action="" className='form-sing-up flow'>
+        <form action="" className='form-login flow'>
         {/* Email */}
         <div className="form-item flex flex-col">
             <label className="uppercase font-semi-bold"htmlFor="name">email</label>
