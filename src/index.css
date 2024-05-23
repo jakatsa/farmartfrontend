@@ -436,7 +436,7 @@ select {
 
 /* 6.Footer */
 .footer {
-  margin-block-start: 28em;
+  margin-block-start: 24em;
   padding-block: 5em 8em;
   
 
@@ -444,27 +444,50 @@ select {
 
 .footer-grid {
   justify-content: space-between;
+  gap:3em;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-  "trade support source"
-  "social social social"
+  "trade support  source"
+  "...   social   ..."
   ;
+
+}
+.source{
+  grid-area:source;
+}
+.support{
+  grid-area:support;
+  justify-self: center;
+
 }
 .trade{
   grid-area:trade;
+  justify-self: end;
+
 }
-.trade{
-  grid-area:trade;
+.social{
+  grid-area:social;
+  border:2px solid orange;
 }
-.trade{
-  grid-area:trade;
+
+.social-links{
+  grid-area:social;
 }
-.footer-social-links-list{
-border:10px solid blue;
+.footer-social-links-list{  
+
 justify-content: space-between;
-margin-block-start: 4em;
+margin-block-start: 3.5em;
 }
 .footer-link {
   cursor: pointer;
 }
 
+.social-link{
+  cursor:pointer;
+}
+
+.footer-nav-list{
+  margin-block-start: 0.5em;
+  gap:0.3em;
+  
+}
