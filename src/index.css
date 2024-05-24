@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 ::root {
-  --clr-primary-500: #8ec711;
+  --clr-primary-500: #8EC711;
+
 }
 
 /* 1. Defaults */
@@ -15,6 +17,8 @@
   padding: 0;
 }
 
+
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -22,6 +26,8 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+
+  min-height: 100dvh;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -67,31 +73,25 @@ select {
   }
 }
 
+
 /* 2.Utilities*/
 /* container */
 .container {
-  --max-width: 960px;
+  --max-width: 980px;
   margin-inline: auto;
   width: min(var(--max-width), 80%);
 }
 
 /* glassmorphisim*/
 .glass {
-
-  background-image: linear-gradient(
-    145deg,
-    rgba(138, 138, 138, 0.479),
-    rgba(255, 255, 255, 0.301),
-    rgba(43, 43, 43, 0.37)
-  );
-
+  background-image: linear-gradient(145deg, rgba(138, 138, 138, 0.479), rgba(255, 255, 255, 0.301), rgba(43, 43, 43, 0.37));
   backdrop-filter: blur(10px) contrast(95%) brightness(115%);
   box-shadow: inset 0 0px 4px rgb(0 0 0 / 0.1);
 }
 
 /* spacer */
-.flow > :not(:first-child) {
-  margin-top: var(--spacer, 2.8em);
+.flow>:not(:first-child) {
+  margin-top: var(--spacer, 2.8em)
 }
 
 /* button */
@@ -103,24 +103,55 @@ select {
 
 .btn::hover {
   cursor: pointer;
-  border: 1px solid white;
+
+}
+
+.btn-primary {
+  max-width: fit-content;
+  height: fit-content;
+  padding: 0.35em 1em;
 }
 
 .btn-ghost {
+
   border: 2px solid black;
+}
+
+.btn-ghost-white {
+  max-width: fit-content;
+  height: fit-content;
+  padding: 0.35em 1em;
+  border: 1px solid white;
 }
 
 /* 3.Form */
 .form-wrapper {
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
+
 }
 
-.form-sing-up {
-  --spacer: 1.5em;
+.form-sign-up {
+  gap: 0.9em;
 }
 
-.form-sing-up > * {
+.form-wrapper-sign-up {
+  margin-inline-start: auto;
+  width: 40%;
+  min-height: 100dvh;
+  min-height: 100vh;
+  padding: 2.5em 2em 2em;
+}
+
+
+.form-login,
+.form-sign-up {
+  --spacer: 3em;
+}
+
+.form-login,
+.form-sign-up>* {
   margin-inline-start: 4rem;
 }
 
@@ -147,6 +178,7 @@ select {
   --spacer: 2.8em;
   width: 80%;
   padding-block: 0.55em;
+
 }
 
 .sign-up-social-icon {
@@ -163,6 +195,7 @@ select {
   align-items: center;
 }
 
+.hero,
 .login,
 .customer-sign-up,
 .farmer-sign-up {
@@ -174,22 +207,16 @@ select {
 
 
 
-
-.form-wrapper-sign-up {
-  margin-inline-start: auto;
-  width: 40%;
-  height: 99.85%;
-  padding: 2.5em 2em 1em;
-}
-
 .already-have-an-account {
-  --spacer: 4em;
+  --spacer: 3em;
   width: 70%;
   margin-inline: auto;
+
 }
 
 .or {
   --spacer: 1.8em;
+  margin-inline-start: 1em;
 }
 
 .home-links {
@@ -201,9 +228,7 @@ select {
   background-image: url("./assets/images/customer-sign-up-bg.jpg");
   background-position: center right;
 
-
 }
-
 
 
 
@@ -214,6 +239,7 @@ select {
   background-position: right center;
 }
 
+.hero::before,
 .login::before,
 .customer-sign-up::before,
 .farmer-sign-up::before {
@@ -226,14 +252,7 @@ select {
 
 .customer-sign-up::before,
 .farmer-sign-up::before {
-
-  background-image: linear-gradient(
-    45deg,
-    rgba(34, 14, 0, 0.596),
-    rgba(49, 22, 1, 0.589),
-    rgba(63, 27, 0, 0.623)
-  );
-
+  background-image: linear-gradient(45deg, rgba(34, 14, 0, 0.596), rgba(49, 22, 1, 0.589), rgba(63, 27, 0, 0.623));
 }
 
 /* 3.3 Login */
@@ -242,33 +261,19 @@ select {
   align-items: center;
   justify-content: center;
   padding-inline: 1em;
-
   background-image: url("./assets/images/login-bg.jpg");
-
   background-position: center;
 }
 
 .login::before {
-
-  background-image: linear-gradient(
-    74deg,
-    rgba(68, 30, 0, 0.692),
-    rgba(0, 26, 75, 0.623)
-  );
-
+  background-image: linear-gradient(74deg, rgba(68, 30, 0, 0.692), rgba(0, 26, 75, 0.623));
 }
 
 .form-wrapper-login {
   --max-width: 580px;
   max-width: 100%;
   padding: 3em 3em 3em 1em;
-
-  background-image: linear-gradient(
-    150deg,
-    rgba(138, 138, 138, 0.445),
-    rgba(255, 255, 255, 0.301),
-    rgba(43, 43, 43, 0.37)
-  );
+  background-image: linear-gradient(150deg, rgba(138, 138, 138, 0.445), rgba(255, 255, 255, 0.301), rgba(43, 43, 43, 0.37));
 
 }
 
@@ -279,4 +284,222 @@ select {
 .sign-alternative {
   width: 90%;
   margin-left: auto;
+}
+
+/* 4. Landing Page */
+/* 4.1 Hero */
+.primary-nav-bar {
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1em;
+}
+
+.primary-nav-list {
+  gap: 5.5em;
+}
+
+.primary-nav-btns {
+  gap: 2em;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-image: url("../src/assets/images/carousel/1.jpg");
+  background-position: center center;
+
+}
+
+.hero::before {
+  background-image: linear-gradient(45deg, rgba(29, 12, 0, 0.637), rgba(22, 9, 0, 0.658), rgba(37, 15, 0, 0.616));
+}
+
+.hero-text-wrapper {
+
+  margin-block-start: 5em;
+}
+
+.hero-paragraph {
+
+  max-width: 60ch;
+  line-height: 1.8;
+  letter-spacing: 0.032rem;
+}
+
+/* 5.Services */
+.services {
+  margin-block-start: 3em;
+}
+
+.services-title {
+  font-size: 3.5rem;
+}
+
+.service-card-grid-heading,
+.service-card-heading {
+  font-size: 2.3rem;
+
+}
+
+.service-link {
+  margin-block-start: 1em;
+}
+
+.link-arrow {
+  font-size: 1.7rem;
+  margin-inline-start: 0.3em;
+  height: fit-content;
+}
+
+/* 5.1 customer and farmer services*/
+.customer-and-farmer-services {
+  padding-block: 1em 6em;
+  justify-content: space-between;
+}
+
+.farmer-service-card,
+.customer-service-card {
+  gap: 0.8em;
+}
+
+.farmer-service-text,
+.customer-service-text {
+  max-width: 49ch;
+  line-height: 1.7;
+}
+
+.farmer-service-icon-wrapper,
+.customer-service-icon-wrapper {
+  place-items: center;
+  margin-block-end: 0.7em;
+}
+
+
+
+.farmer-service-icon,
+.customer-service-icon {
+  object-fit: cover;
+  object-position: center center;
+  width: 35%;
+
+}
+
+.farmer-service-link {
+  margin-block-start: 2.75em;
+}
+
+/*5.2 Other services */
+.other-services-wrapper {
+  gap: 5em;
+}
+
+.service-card-grid-text {
+  max-width: 50ch;
+  grid-area: paragraph;
+}
+
+.service-card-grid-inverse,
+.service-card-grid {
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.service-card-grid {
+  grid-template-areas:
+    "image heading"
+    "image paragraph"
+  ;
+}
+
+.service-card-grid-inverse {
+  grid-template-areas:
+    "heading   image"
+    "paragraph image"
+  ;
+
+}
+
+.service-card-grid-img-inverse,
+.service-card-grid-img {
+  width: 45%;
+}
+
+.service-card-grid-img-inverse {
+  margin-inline: auto;
+}
+
+.service-card-grid-img-wrapper {
+  grid-area: image;
+  align-self: center;
+}
+
+.service-card-grid-heading {
+  grid-area: heading;
+  padding-block-end: 0.5em;
+}
+
+
+/* 6.Footer */
+.footer {
+  margin-block-start: 24em;
+  padding-block: 5em 8em;
+
+
+}
+
+.footer-grid {
+  justify-content: space-between;
+  gap: 3em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "trade support  source"
+    "...   social   ..."
+  ;
+
+}
+
+.source {
+  grid-area: source;
+}
+
+.support {
+  grid-area: support;
+  justify-self: center;
+
+}
+
+.trade {
+  grid-area: trade;
+  justify-self: end;
+
+}
+
+.social {
+  grid-area: social;
+  border: 2px solid orange;
+}
+
+.social-links {
+  grid-area: social;
+}
+
+.footer-social-links-list {
+
+  justify-content: space-between;
+  margin-block-start: 3.5em;
+}
+
+.footer-link {
+  cursor: pointer;
+}
+
+.social-link {
+  cursor: pointer;
+}
+
+.footer-nav-list {
+  margin-block-start: 0.5em;
+  gap: 0.3em;
+
 }
