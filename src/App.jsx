@@ -11,6 +11,7 @@ import SignUp from "./components/Auth/SignUp";
 import { Products } from "./components/Products";
 import { Cart } from "./components/Cart";
 import { CartProvider } from "react-use-cart";
+import { SingleProduct } from "./components/SingleProduct";
 function App() {
   return (
     <CartProvider>
@@ -25,6 +26,7 @@ function App() {
 
           <Route path="/Products" element={<Products />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/SingleProduct" element={<SingleProduct />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
