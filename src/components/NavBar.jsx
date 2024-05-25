@@ -11,7 +11,10 @@ export const NavBar = () => {
       <div className="sticky top-0 bg-white z-10 shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4 lg:py-8">
-            <h1 className="text-4xl font-medium">Farmart</h1>
+            <Link to="/HomePage">
+              {" "}
+              <h1 className="text-4xl font-medium">Farmart</h1>{" "}
+            </Link>
             <div className="lg:hidden">
               <button onClick={() => setMenuOpen(!menuOpen)}>
                 <FiMenu className="text-2xl" />
