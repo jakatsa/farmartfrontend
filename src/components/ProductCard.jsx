@@ -75,7 +75,7 @@ export const ProductCard = ({ animal }) => {
             <p> {animal.animal_breed}</p>
           </div>
         </div>
-      </div>
+      </div>{" "}
     </>
   );
 };
