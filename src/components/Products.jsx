@@ -52,11 +52,3 @@ export const Products = () => {
     </>
   );
 };
-{
-  /*** <h1>products</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {animals.map((animal) => (
-          <ProductCard key={animal.animal_id} animal={animal} />
-        ))}
-      </div> */
-}
