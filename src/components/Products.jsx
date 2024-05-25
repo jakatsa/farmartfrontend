@@ -30,6 +30,7 @@ export const Products = () => {
 
   return (
     <>
+
       <div className="py-10">
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-2xl bg-black text-white py-2 text-center w-80">
@@ -54,9 +55,17 @@ export const Products = () => {
 };
 {
   /*** <h1>products</h1>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {animals.map((animal) => (
           <ProductCard key={animal.animal_id} animal={animal} />
         ))}
+
       </div> */
 }
+
+      </div>
+    </>
+  );
+};
+

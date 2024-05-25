@@ -1,6 +1,8 @@
 import React from "react";
+
 import { BsArrowRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+
 import { useCart } from "react-use-cart";
 
 export const ProductCard = ({ animal }) => {
@@ -15,6 +17,7 @@ export const ProductCard = ({ animal }) => {
     console.log("Item to be added to cart:", item); // Log the item object
     addItem(item);
   };
+
   const navigate = useNavigate();
   const _id = animal.animal_name;
   const idString = (_id) => {
@@ -81,6 +84,11 @@ export const ProductCard = ({ animal }) => {
 };
 {
   /** <div className="p-4 border rounded-lg shadow-lg">
+
+
+  return (
+    <div className="p-4 border rounded-lg shadow-lg">
+
       <img
         src={animal.animal_picture}
         alt={animal.animal_name}
@@ -102,5 +110,11 @@ export const ProductCard = ({ animal }) => {
       >
         Add To Cart
       </button>
+
     </div> */
 }
+
+    </div>
+  );
+};
+
