@@ -32,6 +32,7 @@ function App() {
           <Route path="/Cart" element={<Cart />} />
 
           <Route path="/SingleProduct/:id" element={<SingleProduct />} />
+
         </Routes>
       </BrowserRouter>
     </CartProvider>

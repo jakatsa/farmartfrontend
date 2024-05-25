@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { NavBar } from "./NavBar";
 import { useLocation } from "react-router-dom";
@@ -22,4 +23,5 @@ export const SingleProduct = () => {
       </div>
     </>
   );
+
 };
