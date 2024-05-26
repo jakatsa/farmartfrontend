@@ -1,11 +1,13 @@
 
 import React, { useEffect, useState } from "react";
 import { NavBar } from "./NavBar";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 export const SingleProduct = () => {
-  const [details, setDetails] = useState({});
+  const [animal, setAnimal] = useState({});
   const location = useLocation();
+  const {id} = useParams()
+  console.log(id)
 
   useEffect(() => {
     if (location.state && location.state.item) {
@@ -13,12 +15,34 @@ export const SingleProduct = () => {
     }
   }, [location.state]);
 
+  useEffect(() => {
+    const fetchAnimals = async () => {
+      try {
+        const response = await fetch(
+          `http://127.0.0.1:8000/api/animals/${id}`
+        );
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        setAnimal(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAnimals();
+  }, []);
+
   return (
     <>
       <NavBar />
       <div>
         <div className="max-w-screen-xl mx-auto my-10 flex gap-10">
-          <div>gold</div>
+          <div>
+            <p>{animal.animal_name}</p>
+            <img src = {animal.animal_picture} alt = {animal.animal_name}/>
+          </div>
         </div>
       </div>
     </>
