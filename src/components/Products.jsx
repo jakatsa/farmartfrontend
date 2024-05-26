@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ProductCard } from "./ProductCard";
+import { SingleProduct } from "./SingleProduct";
 
 export const Products = () => {
   const [animals, setAnimals] = useState([]);
