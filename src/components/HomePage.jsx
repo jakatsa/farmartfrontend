@@ -6,7 +6,7 @@ import { Products } from "./Products";
 import { NavBar } from "./NavBar";
 
 
-import { Slice } from "./Slice";
+
 
 export const HomePage = () => {
   return (
