@@ -6,6 +6,8 @@
 ::root {
   --clr-primary-500: #8EC711;
 
+  --clr-primary-700: #1E2C00;
+
 }
 
 /* 1. Defaults */
@@ -130,6 +132,7 @@ select {
   min-height: 100dvh;
   width: 100%;
 
+
 }
 
 .form-sign-up {
@@ -149,6 +152,7 @@ select {
 .form-sign-up {
   --spacer: 3em;
 }
+
 
 .form-login,
 .form-sign-up>* {
@@ -284,6 +288,13 @@ select {
 .sign-alternative {
   width: 90%;
   margin-left: auto;
+}
+
+
+.login-form-btn {
+  min-width: 100%;
+  margin-inline-start: auto;
+
 }
 
 /* 4. Landing Page */
@@ -439,8 +450,97 @@ select {
   padding-block-end: 0.5em;
 }
 
+/* 6.Farmer */
+/* 6.1 farmer navigation  */
+.farmer-pg,
+.product-form-wrapper {
+  min-height: 100dvh;
+  min-height: 100vh;
 
-/* 6.Footer */
+}
+
+
+.farmer-nav-bar {
+  padding: 1em 3.5em 1em 2em;
+}
+
+.farmer-nav-logo {
+  border-bottom: 1px solid #1E2C00;
+  padding-block-end: 0.4em;
+
+}
+
+.farmer-nav-list {
+  margin-block-start: 1em;
+  gap: 1em;
+}
+
+.farmer-primary-nav-link:hover {
+  color: #8EC711;
+}
+
+/* 6.2 Farmer form  */
+.product-form-section {
+  padding-block-start: 1.1em;
+}
+
+
+.product-form-title {
+  margin-block-end: 0.6em;
+}
+
+.product-input:focus-within {
+  outline: 2px solid #72a700cc;
+}
+
+.farmer-product-form {
+  padding: 2em 4em;
+  background-image: linear-gradient(145deg, rgba(248, 248, 248, 0.966), rgba(240, 239, 239, 0.993), rgba(236, 236, 236, 0.966));
+  backdrop-filter: blur(22px);
+
+}
+
+
+.product-form-elements-wrapper {
+  gap: 1.5em;
+}
+
+.product-form-item {
+  gap: 0.5em;
+}
+
+.type-category-wrapper,
+.breed-number-wrapper,
+.age-price-wrapper {
+  gap: 5.5em;
+}
+
+
+.farm-input-form-select,
+.farm-form-textarea,
+.farmer-product-input-text,
+.farmer-product-input-number {
+  border-radius: 6px;
+
+}
+
+.farm-form-textarea,
+.farmer-product-input-text,
+.farmer-product-input-number {
+  padding: 0.3em 0.35em;
+}
+
+.farm-input-form-select {
+  padding: 0.34em 0.45em;
+  background: white;
+}
+
+.farmer-product-form-btn{
+  padding:0.5em 1em;
+}
+
+/* 7.Footer */
+
 .footer {
   margin-block-start: 24em;
   padding-block: 5em 8em;
@@ -475,10 +575,9 @@ select {
 
 }
 
-.social {
-  grid-area: social;
-  border: 2px solid orange;
-}
+
+
+
 
 .social-links {
   grid-area: social;

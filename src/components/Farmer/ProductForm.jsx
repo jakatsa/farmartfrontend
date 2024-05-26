@@ -1,6 +1,48 @@
 
+import { useState } from "react";
+import axios from 'axios';
 
 function ProductForm  () {
+const [data,setData] = useState({
+  animal_type:"",
+  animal_location:"",
+  animal_breed:"",
+  available:null,
+  animal_description:"",
+  animal_age:null,
+  animal_price:null,
+  animal_picture:"", 
+  animal_name:"",
+
+}) 
+
+const storedToken = localStorage.getItem('token');
+const handleSubmit = async e =>{ 
+    e.preventDefault()
+    
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/animals/add/', data,{
+          headers:{
+          'Content-Type':'application/json',
+          'Authorization':`Token ${storedToken}`
+        },});
+        console.log('Response',response.data)
+        }
+      catch(error){
+          console.error('Error',error)
+      }    
+    console.log(JSON.stringify(data))
+}
+
+    const handleChange = e =>{
+      const name = e.target.name
+      const value = e.target.value
+      setData( prevData => ({...prevData,[name]:value}))
+      
+  }
+  
+
+
   return (
     <div className="container">
 <section className="product-form-section">  
@@ -8,26 +50,30 @@ function ProductForm  () {
     <h2 className="product-form-title | uppercase font-semibold text-primary-800 text-2xl">product form</h2>
     <div className="product-form-wrapper">
       {/* form */}
-      <form action="" className="farmer-product-form | shadow rounded-md  ">
+
+      <form onSubmit={handleSubmit} className="farmer-product-form | shadow rounded-md  ">
+        
         <div className="product-form-elements-wrapper | flex flex-col">
-          {/* Form  segment 1 */}
+          {/* Name */}
+          <div className="product-form-item flex flex-col">
+            <label htmlFor="name" className="uppercase font-semibold">name</label>
+            <input onChange={handleChange}type="text" className="farmer-product-input-text | product-input" name="animal_name" id="name" placeholder="eg.cow,bull,hen," required/>
+          </div>
+          {/* Form  segment 1 */}          
+
           {/* Type and Category Wrapper */}
           <div className="type-category-wrapper | flex">
             {/* Type */}
             <div className="product-form-item flex flex-col">
               <label htmlFor="type" className="uppercase font-semibold">animal type</label>
-              <input type="text" className="farmer-product-input-text product-input" name="type" id="type" placeholder="eg.cattle,goat,sheep"required/>
+
+              <input onChange={handleChange}type="text" className="farmer-product-input-text product-input" name="animal_type" id="type" placeholder="eg.cattle,goat,sheep"required/>
             </div>
             {/* Category */}
             <div className="product-form-item flex flex-col">
-              <label htmlFor="farmer-product-form-category" className="uppercase font-semibold">animal category</label>
-              <select className="farm-input-form-select | product-input capitalize" name="category" id="farmer-product-form-category" required>
-                <option className="capitalize" style={{display:"none"}}></option>
-                <option className="capitalize" value="layers">layers</option>
-                <option className="capitalize" value="meat">meat</option>
-                <option className="capitalize" value="dairy">dairy</option>
-                <option className="capitalize" value="work">work</option>
-              </select>
+              <label htmlFor="location" className="uppercase font-semibold">animal location</label>
+              <input onChange={handleChange}type="text" className="farmer-product-input-text | product-input" name="animal_location" id="location" required/>
+
             </div>
           </div>
           {/* End of type and category wrapper */}
@@ -36,51 +82,55 @@ function ProductForm  () {
             {/* Breed */}
             <div className="product-form-item flex flex-col">
               <label htmlFor="breed" className="uppercase font-semibold">animal breed</label>
-              <input type="text" className="farmer-product-input-text | product-input" name="breed" id="breed" placeholder="eg.chianina,limousin cattle,brown swiss cattle" required/>
+
+              <input onChange={handleChange}type="text" className="farmer-product-input-text | product-input" name="animal_breed" id="breed" placeholder="eg.chianina,limousin cattle,brown swiss cattle" required/>
+
             </div>
             {/*Number/ Available */}
             <div className="product-form-item flex flex-col">
               <label htmlFor="available" className="uppercase font-semibold">number</label>
-              <input type="number" className="farmer-product-input-number | product-input" name="available" id="available" required/>
+
+              <input onChange={handleChange}type="number" className="farmer-product-input-number | product-input" name="available" id="available" required/>
+
             </div>
           </div>
           {/* End of breed and number wrapper */}
           {/* Description */}
           <div className="product-form-item flex flex-col">
             <label htmlFor="description" className="uppercase font-semibold">description</label>
-            <textarea name="image" id="farm-form-image"className="farm-form-textarea | product-input" rows="6" required></textarea>
+
+            <textarea onChange={handleChange}name="animal_description" id="description"className="farm-form-textarea | product-input" rows="6" required></textarea>
+
           </div>
           {/* Age and price wrapper */}
           <div className="age-price-wrapper | flex">
             {/* Age */}
             <div className="product-form-item flex flex-col">
               <label htmlFor="age" className="uppercase font-semibold">age in months</label>
-              <input type="number" className="farmer-product-input-text | product-input" name="age" id="age" required/>
+
+              <input onChange={handleChange}type="number" className="farmer-product-input-text | product-input" name="animal_age" id="age" required/>
+
             </div>
             {/* Price */}
             <div className="product-form-item flex flex-col">
               <label htmlFor="price" className="uppercase font-semibold">price</label>
-              <input type="number" className="farmer-product-input-number | product-input" name="price" id="price" required/>
+
+              <input onChange={handleChange}type="number" className="farmer-product-input-number | product-input" name="animal_price" id="price" required/>
+
             </div>
           </div>
           {/* End of age and price wrapper */}
           {/* Image */}
           <div className="product-form-item flex flex-col">
             <label htmlFor="farm-form-image" className="uppercase font-semibold">animal image url</label>
-            <textarea name="image" id="farm-form-image"className="farm-form-textarea | product-input" rows="6" required></textarea>
+
+            <textarea onChange={handleChange}name="animal_picture" id="farm-form-image"className="farm-form-textarea | product-input" rows="6" required></textarea>
           </div>
-          {/* Gender */}
-          <div className="product-form-item flex flex-col">
-            <label htmlFor="gender" className="uppercase font-semibold">gender</label>
-            <select className="farm-input-form-select | product-input capitalize" name="category" id="farmer-product-form-category" required>
-              <option className="capitalize" style={{display:"none"}}></option>
-              <option className="capitalize" value="male">male</option>
-              <option className="capitalize" value="female">female</option>
-            </select>
-          </div>
+
           {/* Submit Button */}
           <div className="farmer-product-form-btn-wrapper">
-            <button className="btn farmer-product-form-btn font-bold">submit</button>
+            <input onChange={handleChange}value="submit"type="submit" className="farmer-product-form-btn | bg-primary-500 uppercase text-white font-bold rounded hover:bg-white hover:text-primary-800"/>
+
           </div>
         </div>
       </form>
@@ -91,4 +141,6 @@ function ProductForm  () {
   )
 }
 
+
 export default ProductForm
+
