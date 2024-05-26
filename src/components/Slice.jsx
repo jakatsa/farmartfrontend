@@ -2,6 +2,7 @@ import React from "react";
 import { nextSlide, prevSlide, dotSlide } from "../features/slices/SliderSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { sliderData } from "../assets/data/DummyData";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 export const Slice = () => {
   const slideIndex = useSelector((state) => state.slider.value);
@@ -41,13 +42,13 @@ export const Slice = () => {
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-green-300"
         onClick={() => dispatch(nextSlide(slideIndex + 1))}
       >
-        Next
+        <BsArrowRight />
       </button>
       <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-green-300"
         onClick={() => dispatch(prevSlide(slideIndex - 1))}
       >
-        Prev
+        <BsArrowLeft />
       </button>
     </div>
   );
