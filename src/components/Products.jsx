@@ -6,6 +6,11 @@ export const Products = () => {
   const [animals, setAnimals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedBreeds, setSelectedBreeds] = useState([]);
+  const [minAge, setMinAge] = useState(0);
+  const [maxAge, setMaxAge] = useState(400);
+  const [displayedAnimals, setDisplayedAnimals] = useState([]);
 
   useEffect(() => {
     const fetchAnimals = async () => {
@@ -16,6 +21,7 @@ export const Products = () => {
         if (!response.ok) throw new Error("Network response was not ok");
         const data = await response.json();
         setAnimals(data);
+        setDisplayedAnimals(data);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -26,6 +32,42 @@ export const Products = () => {
     fetchAnimals();
   }, []);
 
+  useEffect(() => {
+    const filteredAnimals = animals.filter((animal) => {
+      const matchesSearchTerm = animal.animal_type
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const matchesBreeds =
+        selectedBreeds.length === 0 ||
+        selectedBreeds.includes(animal.animal_breed);
+      const matchesAgeRange =
+        animal.animal_age >= minAge && animal.animal_age <= maxAge;
+      return matchesSearchTerm && matchesBreeds && matchesAgeRange;
+    });
+    setDisplayedAnimals(filteredAnimals);
+  }, [animals, searchTerm, selectedBreeds, minAge, maxAge]);
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleBreedChange = (e) => {
+    const breed = e.target.value;
+    if (e.target.checked) {
+      setSelectedBreeds([...selectedBreeds, breed]);
+    } else {
+      setSelectedBreeds(selectedBreeds.filter((b) => b !== breed));
+    }
+  };
+
+  const handleMinAgeChange = (e) => {
+    setMinAge(parseInt(e.target.value));
+  };
+
+  const handleMaxAgeChange = (e) => {
+    setMaxAge(parseInt(e.target.value));
+  };
+
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
@@ -33,23 +75,33 @@ export const Products = () => {
     <>
       <div className="py-10">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-2xl bg-black text-white py-2 text-center w-80">
-            our products
-          </h1>
-          <span className="w-20 h-[3px] bg-black"></span>
-          <p className="max-w-[700px] text-gray-600 text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-4 gap-10">
-            {animals.map((animal) => (
+          <input
+            type="text"
+            placeholder="Search by animal type"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="border p-2 mb-4 w-full max-w-md"
+          />
+          <div className="flex flex-col mb-4"></div>
+          <div className="flex items-center gap-2">
+            <label>Min Age:</label>
+            <input
+              type="number"
+              value={minAge}
+              onChange={handleMinAgeChange}
+              className="border p-2"
+            />
+          </div>
+          <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {displayedAnimals.map((animal) => (
               <ProductCard key={animal.animal_id} animal={animal} />
             ))}
           </div>
+          <p>Total animals: {displayedAnimals.length}</p>
         </div>
       </div>
     </>
   );
 };
+
+export default Products;
