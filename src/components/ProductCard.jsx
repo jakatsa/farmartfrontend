@@ -1,12 +1,13 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 
 export const ProductCard = ({ animal }) => {
   const { addItem } = useCart();
   
-  const name = animal.animal_name
+  const id = animal.animal_id
+  console.log(id)
 
   const handleAddToCart = () => {
     const item = {
@@ -38,7 +39,7 @@ export const ProductCard = ({ animal }) => {
           
           className="w-full h-96 cursor-pointer overflow-hidden"
         >
-          <Link to={`/SingleProduct/${name}`}>
+          <Link to={`/SingleProduct/${id}`}>
 
           <img
             src={animal.animal_picture}
