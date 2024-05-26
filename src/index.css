@@ -5,6 +5,7 @@
 
 ::root {
   --clr-primary-500: #8EC711;
+
   --clr-primary-700: #1E2C00;
 
 }
@@ -131,6 +132,7 @@ select {
   min-height: 100dvh;
   width: 100%;
 
+
 }
 
 .form-sign-up {
@@ -150,6 +152,7 @@ select {
 .form-sign-up {
   --spacer: 3em;
 }
+
 
 .form-login,
 .form-sign-up>* {
@@ -286,6 +289,7 @@ select {
   width: 90%;
   margin-left: auto;
 }
+
 
 .login-form-btn {
   min-width: 100%;
@@ -536,6 +540,7 @@ select {
 }
 
 /* 7.Footer */
+
 .footer {
   margin-block-start: 24em;
   padding-block: 5em 8em;
@@ -571,6 +576,9 @@ select {
 }
 
 
+
+
+
 .social-links {
   grid-area: social;
 }
@@ -592,4 +600,5 @@ select {
 .footer-nav-list {
   margin-block-start: 0.5em;
   gap: 0.3em;
+
 }
