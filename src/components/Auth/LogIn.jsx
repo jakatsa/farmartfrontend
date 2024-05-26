@@ -22,7 +22,7 @@ function Login() {
         localStorage.setItem('token', data.token); 
         console.log(data.token);
         if (data.role === 'customer') {
-          navigate('/customer');
+          navigate('/HomePage');
         } else if (data.role === 'farmer') {
           navigate('/farmer');
         }
