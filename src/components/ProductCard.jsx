@@ -1,10 +1,13 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 
 export const ProductCard = ({ animal }) => {
   const { addItem } = useCart();
+  
+  const id = animal.animal_id
+  console.log(id)
 
   const handleAddToCart = () => {
     const item = {
@@ -21,26 +24,31 @@ export const ProductCard = ({ animal }) => {
     return String(_id).toLowerCase().split("").join("");
   };
   const rootId = idString(_id);
-  const handleDetails = () => {
-    navigate(`/SingleProduct/${rootId}`),
-      {
-        state: {
-          item: animal,
-        },
-      };
-  };
+  // const handleDetails = () => {
+  //   navigate(`/SingleProduct/${rootId}`),
+  //     {
+  //       state: {
+  //         item: animal,
+  //       },
+  //     };
+  // };
   return (
     <>
       <div className="group">
         <div
-          onClick={handleDetails}
+
+          
           className="w-full h-64 sm:h-72 md:h-80 lg:h-96 cursor-pointer overflow-hidden"
+
         >
+          <Link to={`/SingleProduct/${id}`}>
+
           <img
             src={animal.animal_picture}
             alt={animal.animal_name}
             className="w-full h-full object-cover group-hover:scale-110 duration-500"
           />
+          </Link>
         </div>
         <div className="w-full border-[1px] px-2 py-4">
           <div className="flex justify-between items-center">
