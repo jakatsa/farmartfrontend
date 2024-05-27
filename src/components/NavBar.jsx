@@ -1,52 +1,55 @@
 import React, { useState } from "react";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
-import { BsSearch } from "react-icons/bs";
-import { FiMenu } from "react-icons/fi"; // Import menu icon for mobile
-import { Link } from "react-router-dom";
+import { FiMenu, FiLogOut } from "react-icons/fi";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await axios.get("https://farmartbackend-1.onrender.com/api/auth/logout/");
+      navigate("/login");
+    } catch (error) {
+      console.error("Logout failed", error);
+    }
+  };
 
   return (
-    <>
-      <div className="sticky top-0 bg-white z-10 shadow-md">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4 lg:py-8">
-            <Link to="/HomePage">
-              {" "}
-              <h1 className="text-4xl font-medium">Farmart</h1>{" "}
-            </Link>
-            <div className="lg:hidden">
-              <button onClick={() => setMenuOpen(!menuOpen)}>
-                <FiMenu className="text-2xl" />
+    <div className="sticky top-0 bg-white z-10 shadow-md">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4 lg:py-8">
+          <Link to="/HomePage" className="text-4xl font-medium">
+            Farmart
+          </Link>
+          <div className="lg:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)}>
+              <FiMenu className="text-2xl" />
+            </button>
+          </div>
+          <div
+            className={`lg:flex flex-grow items-center ${
+              menuOpen ? "block" : "hidden"
+            } justify-end`}
+          >
+            <div className="flex gap-4 mt-4 lg:mt-0">
+              <div className="icon__wrapper">
+                <AiOutlineUser className="text-2xl" />
+              </div>
+              <div className="icon__wrapper relative">
+                <Link to="/Cart">
+                  <AiOutlineShoppingCart className="text-2xl" />
+                </Link>
+              </div>
+              <button onClick={handleLogout} className="text-2xl ml-auto">
+                <FiLogOut className="mr-1" />
               </button>
-            </div>
-            <div
-              className={`lg:flex flex-grow items-center ${
-                menuOpen ? "block" : "hidden"
-              }`}
-            >
-              <div className="relative w-full lg:max-w-[500px] mt-4 lg:mt-0">
-                <input
-                  className="bg-[#f2f3f5] border-none outline-none px-6 py-3 rounded-[30px] w-full"
-                  type="text"
-                  placeholder="search livestock"
-                />
-                <BsSearch className="absolute top-0 right-0 mt-4 mr-5 text-gray-500" />
-              </div>
-              <div className="flex gap-4 mt-4 lg:mt-0 lg:ml-4">
-                <div className="icon__wrapper">
-                  <AiOutlineUser className="text-2xl" />
-                </div>
-                <div className="icon__wrapper relative">
-                  <Link to="/Cart">
-                    <AiOutlineShoppingCart className="text-2xl" />{" "}
-                  </Link>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

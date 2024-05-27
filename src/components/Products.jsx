@@ -80,8 +80,14 @@ export const Products = () => {
             placeholder="Search by animal type"
             value={searchTerm}
             onChange={handleSearchChange}
-            className="border p-2 mb-4 w-full max-w-md"
+
+            className="border border-gray-300 p-2 mb-4 w-full max-w-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:border-transparent transition duration-300 ease-in-out"
+            style={{
+              "--tw-ring-color": "#8EC711",
+            }}
           />
+
+
           <div className="flex flex-col mb-4"></div>
           <div className="flex items-center gap-2">
             <label>Min Age:</label>
@@ -89,7 +95,12 @@ export const Products = () => {
               type="number"
               value={minAge}
               onChange={handleMinAgeChange}
-              className="border p-2"
+
+              className="border border-gray-300 p-2 mb-4 w-full max-w-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:border-transparent transition duration-300 ease-in-out"
+              style={{
+                "--tw-ring-color": "#8EC711",
+              }}
+
             />
           </div>
           <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
