@@ -1,8 +1,13 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+import FamerProductCard from './FamerProductCard'
+
+
 function NewProducts(){
 const [products, setProducts] = useState([])
-// console.log(products)
+
+
+
 useEffect( () =>{
   const fetchProducts = async () =>{
     
@@ -28,7 +33,17 @@ useEffect( () =>{
 ,[])
 
   return (
-    <div>Products</div>
+
+    <div className="farmer-products-wrapper">
+      <div className="container">
+      <h2 className="farmer-products-title | font-bold uppercase text-4xl">my products</h2>
+      </div>
+      <div className="farmer-products-grid | md:grid-cols-2  container grid ">
+        {products.map(product => <FamerProductCard key={product.id} {...product}/>)}
+      </div>
+
+    </div>
+
   )
 }
 

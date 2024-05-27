@@ -1,8 +1,18 @@
 
 
-function FarmerOrderCard () {
+function FamerProductCard ({
+    animal_id ,
+    animal_picture, 
+    animal_name, 
+    animal_type,
+    animal_breed, 
+    animal_price, 
+    animal_location, 
+    available,
+ 
+    animal_age,}) {
   return (
-        <div className ='farmer-product-card-wrapper | rounded-sm bg-white shadow'>
+    <div className ='farmer-product-card-wrapper | rounded-sm bg-white shadow'>
     <div className="farmer-product-card flex flex-col">
         {/* Image */}
        <div className="farmer-product-img-wrapper">        
@@ -34,7 +44,17 @@ function FarmerOrderCard () {
         <span className="farmer-product-value">{`${animal_age}`}</span> months        
         </p>
         </div>
-
+        {/* Location and  Number*/}
+        <div className='farmer-name-type-wrapper | flex'>
+        {/*Location */}
+        <p> <span className="farmer-product-title | capitalize font-semibold">location</span>:
+        <span className="farmer-product-value">{`${animal_location}`}</span>      
+        </p>
+        {/*Number /Available */}
+        <p> <span className="farmer-product-title | capitalize font-semibold">number</span>:
+        <span className="farmer-product-value">{`${available}`}</span>         
+        </p>
+        </div>
         <div className="farmer-product-card-btn-wrapper flex">
             <button className="farmer-product-delete-btn | farmer-product-btn rounded-sm btn-ghost uppercase font-bold  ">delete</button>
             <button className="farmer-product-edit-btn | farmer-product-btn  rounded-sm btn-ghost uppercase font-bold  ">edit</button>
@@ -44,4 +64,4 @@ function FarmerOrderCard () {
   )
 }
 
-export default FarmerOrderCard
+export default FamerProductCard

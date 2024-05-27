@@ -15,7 +15,9 @@ export const HomePage = () => {
       <Slice />
 
 
+
       <Products />
+
 
 
     </div>
