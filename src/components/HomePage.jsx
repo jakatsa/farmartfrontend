@@ -1,8 +1,11 @@
+
 import React from "react";
 import { Slice } from "./Slice";
 
 import { Products } from "./Products";
 import { NavBar } from "./NavBar";
+
+
 
 
 export const HomePage = () => {
@@ -11,7 +14,11 @@ export const HomePage = () => {
       <NavBar />
       <Slice />
 
+
+
       <Products />
+
+
 
     </div>
   );

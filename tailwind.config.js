@@ -15,7 +15,12 @@ export default {
           800:"#010600"
         },
         neutral:{
-          100:"#FFF", },
+
+          100:"#FFF",
+          200:"#fcfdff",
+                  },
+          
+
         accent:{
             100:"#FFEFE2",
           }
