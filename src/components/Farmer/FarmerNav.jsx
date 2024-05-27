@@ -13,6 +13,7 @@ return (
                     <li className="farmer-primary-nav-link"><NavLink to="/farmer/orders">my orders</NavLink></li>
                     <li className="farmer-primary-nav-link"><NavLink to="/farmer/products">my products</NavLink></li>
                     <li className="farmer-primary-nav-link"><NavLink to="/farmer/createProduct">create product</NavLink></li>
+                    <li className="farmer-primary-nav-link | farmer-primary-nav-link-log-out  "><NavLink to="/login">log out</NavLink></li>
 
                 </ul>
             </nav>
