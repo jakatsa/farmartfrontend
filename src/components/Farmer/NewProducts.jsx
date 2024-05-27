@@ -4,36 +4,49 @@ import FamerProductCard from './FamerProductCard'
 
 
 function NewProducts(){
+const [token, setToken] = useState('');
 const [products, setProducts] = useState([])
 
-
-
+// console.log(products)
+// console.log(token)
 useEffect( () =>{
   const fetchProducts = async () =>{
-    
-    try{
-      const response = await axios.get('https://fakestoreapi.com/products');
-      setProducts(response.data)
-    }
-    catch(err){
-      if(err.response){
-        console.error(err.response.status);
-        console.error(err.response.headers);
-        console.error(err.response.data.message);
-      }else{
-        console.log(`Error:${err.message}`);
+    console.log("use ee")
+    const storedToken = localStorage.getItem('token');
+    console.log("stored token",storedToken)
+    setToken(storedToken);
+    const fetchAnimals = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/animals/farmer/', {
+          method: 'GET',
+          headers: {
+            'Authorization': `Token ${storedToken}`,
+          },
+        });
+        const data = await response.json();
+        if (response.ok) {
+          // const transformedData = data.map(animal => ({
+          //   name: animal.animal_name,
+          //   amount: animal.available,
+          // }));
+          setProducts(data);
+          console.log(data)
+        } else {
+          console.error('Error:', data.message);
+        }
+      } catch (error) {
+        console.error('Error:', error);
       }
-      
-    }
+    };
     
+    fetchAnimals();
   }
-  fetchProducts()
-}
-
-,[])
+fetchProducts()
+}, []);
+ 
+    
 
   return (
-
     <div className="farmer-products-wrapper">
       <div className="container">
       <h2 className="farmer-products-title | font-bold uppercase text-4xl">my products</h2>
@@ -43,7 +56,6 @@ useEffect( () =>{
       </div>
 
     </div>
-
   )
 }
 
