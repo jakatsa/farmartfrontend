@@ -56,9 +56,9 @@ function FarmerSignUp() {
         <div className="farmer-sign-up form-wrapper">
           <div className="form-wrapper-sign-up glass flow">
             {/* Logo */}
-            <p className='font-semi-bold uppercase text-7xl text-center'>farmart</p>
+            <p className='font-semi-bold uppercase text-5xl text-center'>farmart</p>
             {/* Form heading */}
-            <h2 className='form-heading font-semi-bold uppercase text-2xl text-center'>Farmer's Sign Up</h2>
+            <h2 className='form-heading font-semi-bold uppercase text-xl text-center'>Farmer&lsquo;s Sign Up</h2>
             {/* Form wrapper */}
             <form onSubmit={handleSubmit} className='form-sign-up | flex flex-col flow'>
               {/* Username */}
@@ -118,17 +118,6 @@ function FarmerSignUp() {
             <div className="already-have-an-account flex justify-between">
               <p>Already have an account?</p>
               <NavLink to="/login" className="font-bold text-l capitalize">Log In</NavLink>
-            </div>
-            <p className='uppercase text-center or'>or</p>
-            <div className="social-btns flex flex-col flow">
-              <NavLink to="#" className="flex social-btn btn btn-ghost capitalize text-center">
-                <img className="sign-up-social-icon" src="../src/assets/icons/google.svg" alt="google icon" />
-                <p>Sign up with Google</p>
-              </NavLink>
-              <NavLink to="#" className="flex social-btn btn btn-ghost capitalize text-center">
-                <img className="sign-up-social-icon" src="../src/assets/icons/facebook.svg" alt="facebook icon" />
-                <p>Sign up with Facebook</p>
-              </NavLink>
             </div>
           </div>
         </div>
