@@ -6,7 +6,7 @@ function Connection  () {
             <div className="service-card-grid-img-wrapper">
                 <img
                     className=" service-card-grid-img-inverse"
-                    src="../src/assets/icons/connect.png"
+                    src="https://raw.githubusercontent.com/jakatsa/farmartbackend/03d0bce04d0f6c82a2d3c2653acddbebcb3bf58f/media/connect.png"
                     alt="two hands locked together as when greeting"
                 />
             </div>
