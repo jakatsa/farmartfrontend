@@ -13,7 +13,13 @@ export const HomePage = () => {
     <div>
       <NavBar />
       <Slice />
+
+
+
       <Products />
+
+
+
     </div>
   );
 };
