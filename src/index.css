@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 ::root {
-  --clr-primary-500: #8EC711;
+  --clr-primary-500: #8ec711;
 
-  --clr-primary-700: #1E2C00;
-
+  --clr-primary-700: #1e2c00;
 }
 
 /* 1. Defaults */
@@ -19,8 +17,6 @@
   padding: 0;
 }
 
-
-
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -28,7 +24,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-
   min-height: 100dvh;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -75,7 +70,6 @@ select {
   }
 }
 
-
 /* 2.Utilities*/
 /* container */
 .container {
@@ -86,14 +80,19 @@ select {
 
 /* glassmorphisim*/
 .glass {
-  background-image: linear-gradient(145deg, rgba(138, 138, 138, 0.479), rgba(255, 255, 255, 0.301), rgba(43, 43, 43, 0.37));
+  background-image: linear-gradient(
+    145deg,
+    rgba(138, 138, 138, 0.479),
+    rgba(255, 255, 255, 0.301),
+    rgba(43, 43, 43, 0.37)
+  );
   backdrop-filter: blur(10px) contrast(95%) brightness(115%);
   box-shadow: inset 0 0px 4px rgb(0 0 0 / 0.1);
 }
 
 /* spacer */
-.flow>:not(:first-child) {
-  margin-top: var(--spacer, 2.8em)
+.flow > :not(:first-child) {
+  margin-top: var(--spacer, 2.8em);
 }
 
 /* button */
@@ -105,7 +104,6 @@ select {
 
 .btn::hover {
   cursor: pointer;
-
 }
 
 .btn-primary {
@@ -115,7 +113,6 @@ select {
 }
 
 .btn-ghost {
-
   border: 2px solid black;
 }
 
@@ -131,8 +128,6 @@ select {
   min-height: 100vh;
   min-height: 100dvh;
   width: 100%;
-
-
 }
 
 .form-sign-up {
@@ -147,15 +142,13 @@ select {
   padding: 2.5em 2em 2em;
 }
 
-
 .form-login,
 .form-sign-up {
   --spacer: 3em;
 }
 
-
 .form-login,
-.form-sign-up>* {
+.form-sign-up > * {
   margin-inline-start: 4rem;
 }
 
@@ -182,7 +175,6 @@ select {
   --spacer: 2.8em;
   width: 80%;
   padding-block: 0.55em;
-
 }
 
 .sign-up-social-icon {
@@ -209,13 +201,10 @@ select {
   isolation: isolate;
 }
 
-
-
 .already-have-an-account {
   --spacer: 3em;
   width: 70%;
   margin-inline: auto;
-
 }
 
 .or {
@@ -230,11 +219,10 @@ select {
 /* 3.1 customer sing up */
 .customer-sign-up {
   background-image: url("./assets/images/customer-sign-up-bg.jpg");
+
   background-position: top center;
 
 }
-
-
 
 /* 3.2 farmer's sing up */
 
@@ -256,7 +244,12 @@ select {
 
 .customer-sign-up::before,
 .farmer-sign-up::before {
-  background-image: linear-gradient(45deg, rgba(34, 14, 0, 0.596), rgba(49, 22, 1, 0.589), rgba(63, 27, 0, 0.623));
+  background-image: linear-gradient(
+    45deg,
+    rgba(34, 14, 0, 0.596),
+    rgba(49, 22, 1, 0.589),
+    rgba(63, 27, 0, 0.623)
+  );
 }
 
 /* 3.3 Login */
@@ -270,15 +263,23 @@ select {
 }
 
 .login::before {
-  background-image: linear-gradient(74deg, rgba(68, 30, 0, 0.692), rgba(0, 26, 75, 0.623));
+  background-image: linear-gradient(
+    74deg,
+    rgba(68, 30, 0, 0.692),
+    rgba(0, 26, 75, 0.623)
+  );
 }
 
 .form-wrapper-login {
   --max-width: 580px;
   max-width: 100%;
   padding: 3em 3em 3em 1em;
-  background-image: linear-gradient(150deg, rgba(138, 138, 138, 0.445), rgba(255, 255, 255, 0.301), rgba(43, 43, 43, 0.37));
-
+  background-image: linear-gradient(
+    150deg,
+    rgba(138, 138, 138, 0.445),
+    rgba(255, 255, 255, 0.301),
+    rgba(43, 43, 43, 0.37)
+  );
 }
 
 .login .input-area {
@@ -290,11 +291,9 @@ select {
   margin-left: auto;
 }
 
-
 .login-form-btn {
   min-width: 100%;
   margin-inline-start: auto;
-
 }
 
 /* 4. Landing Page */
@@ -319,20 +318,22 @@ select {
   min-height: 100dvh;
   background-image: url("../src/assets/images/carousel/1.jpg");
   background-position: center center;
-
 }
 
 .hero::before {
-  background-image: linear-gradient(45deg, rgba(29, 12, 0, 0.637), rgba(22, 9, 0, 0.658), rgba(37, 15, 0, 0.616));
+  background-image: linear-gradient(
+    45deg,
+    rgba(29, 12, 0, 0.637),
+    rgba(22, 9, 0, 0.658),
+    rgba(37, 15, 0, 0.616)
+  );
 }
 
 .hero-text-wrapper {
-
   margin-block-start: 5em;
 }
 
 .hero-paragraph {
-
   max-width: 60ch;
   line-height: 1.8;
   letter-spacing: 0.032rem;
@@ -350,7 +351,6 @@ select {
 .service-card-grid-heading,
 .service-card-heading {
   font-size: 2.3rem;
-
 }
 
 .service-link {
@@ -386,14 +386,11 @@ select {
   margin-block-end: 0.7em;
 }
 
-
-
 .farmer-service-icon,
 .customer-service-icon {
   object-fit: cover;
   object-position: center center;
   width: 35%;
-
 }
 
 .farmer-service-link {
@@ -419,16 +416,13 @@ select {
 .service-card-grid {
   grid-template-areas:
     "image heading"
-    "image paragraph"
-  ;
+    "image paragraph";
 }
 
 .service-card-grid-inverse {
   grid-template-areas:
     "heading   image"
-    "paragraph image"
-  ;
-
+    "paragraph image";
 }
 
 .service-card-grid-img-inverse,
@@ -456,18 +450,15 @@ select {
 .product-form-wrapper {
   min-height: 100dvh;
   min-height: 100vh;
-
 }
-
 
 .farmer-nav-bar {
   padding: 1em 3.5em 1em 2em;
 }
 
 .farmer-nav-logo {
-  border-bottom: 1px solid #1E2C00;
+  border-bottom: 1px solid #1e2c00;
   padding-block-end: 0.4em;
-
 }
 
 .farmer-nav-list {
@@ -476,14 +467,13 @@ select {
 }
 
 .farmer-primary-nav-link:hover {
-  color: #8EC711;
+  color: #8ec711;
 }
 
 /* 6.2 Farmer form  */
 .product-form-section {
   padding-block-start: 1.1em;
 }
-
 
 .product-form-title {
   margin-block-end: 0.6em;
@@ -495,10 +485,15 @@ select {
 
 .farmer-product-form {
   padding: 2em 4em;
-  background-image: linear-gradient(145deg, rgba(248, 248, 248, 0.966), rgba(240, 239, 239, 0.993), rgba(236, 236, 236, 0.966));
+
+  background-image: linear-gradient(
+    145deg,
+    rgba(248, 248, 248, 0.966),
+    rgba(240, 239, 239, 0.993),
+    rgba(236, 236, 236, 0.966)
+  );
   backdrop-filter: blur(22px);
 }
-
 
 .product-form-elements-wrapper {
   gap: 1.5em;
@@ -514,13 +509,11 @@ select {
   gap: 5.5em;
 }
 
-
 .farm-input-form-select,
 .farm-form-textarea,
 .farmer-product-input-text,
 .farmer-product-input-number {
   border-radius: 6px;
-
 }
 
 .farm-form-textarea,
@@ -533,6 +526,7 @@ select {
   padding: 0.34em 0.45em;
   background: white;
 }
+
 
 .farmer-product-form-btn{
   padding:0.5em 1em;
@@ -602,11 +596,10 @@ color:white;
 
 /* 8.Footer */
 
+
 .footer {
   margin-block-start: 24em;
   padding-block: 5em 8em;
-
-
 }
 
 .footer-grid {
@@ -615,9 +608,7 @@ color:white;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "trade support  source"
-    "...   social   ..."
-  ;
-
+    "...   social   ...";
 }
 
 .source {
@@ -627,25 +618,18 @@ color:white;
 .support {
   grid-area: support;
   justify-self: center;
-
 }
 
 .trade {
   grid-area: trade;
   justify-self: end;
-
 }
-
-
-
-
 
 .social-links {
   grid-area: social;
 }
 
 .footer-social-links-list {
-
   justify-content: space-between;
   margin-block-start: 3.5em;
 }
@@ -661,5 +645,4 @@ color:white;
 .footer-nav-list {
   margin-block-start: 0.5em;
   gap: 0.3em;
-
 }
