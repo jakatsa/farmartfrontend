@@ -497,7 +497,6 @@ select {
   padding: 2em 4em;
   background-image: linear-gradient(145deg, rgba(248, 248, 248, 0.966), rgba(240, 239, 239, 0.993), rgba(236, 236, 236, 0.966));
   backdrop-filter: blur(22px);
-
 }
 
 
@@ -538,6 +537,56 @@ select {
 .farmer-product-form-btn{
   padding:0.5em 1em;
 }
+/* 6.3 Farmer Products*/
+.farmer-products-title{
+  margin-block:0.4em;
+  
+}
+.farmer-products-grid{
+gap:2em;
+
+}
+
+
+.farmer-product-card-wrapper{
+--max-width:300px;
+width:min(var(--max-width),80%);
+padding:0.3em 0.5em 0.5em;
+
+}
+.farmer-product-card{
+max-width:fit-content;
+justify-content:center;
+
+gap:0.5em;
+}
+.farmer-product-img-wrapper{
+  min-width:100%;
+  max-height:30%;
+}
+.farmer-product-img{
+  object-fit:cover;
+}
+.farmer-product-card-btn-wrapper,
+.farmer-name-type-wrapper,
+.farmer-name-type-wrapper{
+  gap:2em;
+}
+.farmer-product-card-btn-wrapper{
+  margin-top:1em;
+}
+.farmer-product-btn{
+  padding:0.3em 0.5em;
+}
+.farmer-product-delete-btn:hover{
+  border-color:red;
+  color:red;
+}
+.farmer-product-edit-btn:hover{
+background-color:black;
+color:white;
+}
+
 
 /* 7.Footer */
 
