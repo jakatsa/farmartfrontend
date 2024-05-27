@@ -6,7 +6,7 @@ function FarmerServices() {
             <div className="farmer-service-icon-wrapper grid">
                 <img
                     className="farmer-service-icon "
-                    src="../src/assets/icons/farmer-icon.png"
+                    src="https://raw.githubusercontent.com/jakatsa/farmartbackend/03d0bce04d0f6c82a2d3c2653acddbebcb3bf58f/media/farmer-icon.png"
                     alt="farmers icon"
                 />
             </div>

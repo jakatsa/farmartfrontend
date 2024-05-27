@@ -4,7 +4,7 @@ function Track() {
             <div className="service-card-grid-img-wrapper">
                 <img
                     className="service-card-grid-img"
-                    src="../src/assets/icons/transaction.png"
+                    src="https://raw.githubusercontent.com/jakatsa/farmartbackend/03d0bce04d0f6c82a2d3c2653acddbebcb3bf58f/media/transaction.png"
                     alt="transaction image, a phone and a bag of money connected with a vertical rectangle "
                 />
             </div>

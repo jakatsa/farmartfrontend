@@ -5,7 +5,7 @@ function CustomerServices() {
         <section className="customer-service-card flex flex-col">
             <div className="customer-service-icon-wrapper grid">
                 <img className="customer-service-icon "
-                    src="../src/assets/icons/customer-icon.png"
+                    src="https://raw.githubusercontent.com/jakatsa/farmartbackend/03d0bce04d0f6c82a2d3c2653acddbebcb3bf58f/media/customer-icon.png"
                     alt="customer icon"
                 />
             </div>

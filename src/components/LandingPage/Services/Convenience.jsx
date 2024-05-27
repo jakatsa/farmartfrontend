@@ -6,7 +6,7 @@ function  Convenience  () {
           <div className="service-card-grid-img-wrapper">
               <img
                   className="service-card-grid-img"
-                  src="../src/assets/icons/convenient.png"
+                  src="https://raw.githubusercontent.com/jakatsa/farmartbackend/03d0bce04d0f6c82a2d3c2653acddbebcb3bf58f/media/convenient.png"
                   alt="a man relaxing on a sit with hands on his head with one foot up "
               />
           </div>
