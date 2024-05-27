@@ -5,10 +5,7 @@
 ::root {
   --clr-primary-500: #8ec711;
 
-
-  --clr-primary-700: #1E2C00;
-
-
+  --clr-primary-700: #1e2c00;
 }
 
 /* 1. Defaults */
@@ -131,7 +128,6 @@ select {
   min-height: 100vh;
   min-height: 100dvh;
   width: 100%;
-
 }
 
 .form-sign-up {
@@ -150,7 +146,6 @@ select {
 .form-sign-up {
   --spacer: 3em;
 }
-
 
 .form-login,
 .form-sign-up > * {
@@ -294,13 +289,9 @@ select {
   margin-left: auto;
 }
 
-
-
 .login-form-btn {
   min-width: 100%;
   margin-inline-start: auto;
-
-
 }
 
 /* 4. Landing Page */
@@ -457,23 +448,15 @@ select {
 .product-form-wrapper {
   min-height: 100dvh;
   min-height: 100vh;
-
-
 }
-
-
 
 .farmer-nav-bar {
   padding: 1em 3.5em 1em 2em;
 }
 
 .farmer-nav-logo {
-
- 
-  border-bottom: 1px solid #1E2C00;
+  border-bottom: 1px solid #1e2c00;
   padding-block-end: 0.4em;
-
-
 }
 
 .farmer-nav-list {
@@ -482,9 +465,7 @@ select {
 }
 
 .farmer-primary-nav-link:hover {
-
-  color: #8EC711;
-
+  color: #8ec711;
 }
 
 /* 6.2 Farmer form  */
@@ -503,10 +484,14 @@ select {
 .farmer-product-form {
   padding: 2em 4em;
 
-  background-image: linear-gradient(145deg, rgba(248, 248, 248, 0.966), rgba(240, 239, 239, 0.993), rgba(236, 236, 236, 0.966));
+  background-image: linear-gradient(
+    145deg,
+    rgba(248, 248, 248, 0.966),
+    rgba(240, 239, 239, 0.993),
+    rgba(236, 236, 236, 0.966)
+  );
   backdrop-filter: blur(22px);
 }
-
 
 .product-form-elements-wrapper {
   gap: 1.5em;
@@ -527,7 +512,6 @@ select {
 .farmer-product-input-text,
 .farmer-product-input-number {
   border-radius: 6px;
-
 }
 
 .farm-form-textarea,
@@ -540,7 +524,6 @@ select {
   padding: 0.34em 0.45em;
   background: white;
 }
-
 
 /* 7.Footer */
 
@@ -570,7 +553,7 @@ select {
 .trade {
   grid-area: trade;
   justify-self: end;
-
+}
 
 .social-links {
   grid-area: social;
