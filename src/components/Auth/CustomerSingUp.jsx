@@ -35,7 +35,7 @@ function CustomerSignUp() {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const response = await fetch('http://localhost:8000/api/customer/register/', {
+          const response = await fetch('farmartbackend-3.onrender.com/api/customer/register/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

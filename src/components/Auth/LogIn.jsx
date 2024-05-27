@@ -10,7 +10,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/api/auth/login/', {
+      const response = await fetch('farmartbackend-3.onrender.com/api/auth/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

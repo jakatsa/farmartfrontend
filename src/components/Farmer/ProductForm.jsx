@@ -12,7 +12,7 @@ const AnimalForm = () => {
     animal_category: '',
     animal_gender: '',
     available: '',
-    farmer: '', // Farmer ID will be populated automatically
+    farmer: '',
     animal_price: '',
     animal_description: ''
   });
@@ -20,14 +20,14 @@ const AnimalForm = () => {
   useEffect(() => {
     // Fetch farmer ID here and set it in formData
     const token = localStorage.getItem('token');
-    console.log(token) // Assuming token is stored in localStorage
-    axios.get('http://localhost:8000/farmer-info', {
+    console.log(token) 
+    axios.get('farmartbackend-3.onrender.com/farmer-info', {
       headers: {
         Authorization: `Token ${token}`
       }
     })
       .then(response => {
-        const farmerId = response.data.farmer_id; // Assuming the endpoint returns farmer_id
+        const farmerId = response.data.farmer_id; 
         setFormData({
           ...formData,
           farmer: farmerId
@@ -47,7 +47,7 @@ const AnimalForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/api/animals/add/', formData, {
+    axios.post('farmartbackend-3.onrender.com/api/animals/add/', formData, {
       headers: {
         Authorization: `Token ${localStorage.getItem('token')}`
       }

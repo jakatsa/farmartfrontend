@@ -35,7 +35,7 @@ function FarmerSignUp() {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const response = await fetch('http://localhost:8000/api/farmer/register/', {
+          const response = await fetch('farmartbackend-3.onrender.com/api/farmer/register/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
