@@ -1,4 +1,6 @@
+
 import React from "react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -16,12 +18,15 @@ import { CartProvider } from "react-use-cart";
 
 import { SingleProduct } from "./components/SingleProduct";
 
+
 import FarmerPage from "./components/Farmer/FarmerPage";
 import Error from "./components/Error";
+
 import FarmerIndexPage from "./components/Farmer/FarmerIndexPage";
 import Orders from "./components/Farmer/Orders";
 import NewProducts from "./components/Farmer/NewProducts";
 import ProductForm from "./components/Farmer/ProductForm";
+
 
 function App() {
   return (
@@ -39,6 +44,7 @@ function App() {
           <Route path="/Cart" element={<Cart />} />
 
           <Route path="/SingleProduct/:id" element={<SingleProduct />} />
+
           <Route path="/farmer" element={<FarmerPage />}>
             <Route index element={<FarmerIndexPage />} />
             <Route path="orders" element={<Orders />} />
@@ -46,6 +52,7 @@ function App() {
             <Route path="createProduct" element={<ProductForm />} />
           </Route>
           <Route path="*" element={<Error />} />
+
         </Routes>
       </BrowserRouter>
     </CartProvider>
